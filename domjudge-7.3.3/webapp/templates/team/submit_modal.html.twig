@@ -29,13 +29,22 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn-success btn">
+                    <button type="button" id="cancelBtn" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="testFile" name="boton" value="test" class="btn-info btn">Test</button>
+                    <button type="submit" id="submitBtn" name="boton" value="submit" class="btn-success btn">
                         <i class="fas fa-cloud-upload-alt"></i> Submit
                     </button>
                 </div>
+                
                 {{ form_end(form) }}
+                <div id="ventanaSalida">
+                    <div id="compilando">Compilando...</div>
+                    <div id="comprobando"></div>
+                    <div id="solucion"></div>
+                    <button type="button" id="botonOkTest">Ok</button>
+                </div>
             {% endif %}
         </div>
+        
     </div>
 </div>
