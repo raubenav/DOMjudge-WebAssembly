@@ -11,6 +11,9 @@ app.post("/comp",(req,res) =>{
     var idP = req.body.id;
     var codP = req.body.codigo;
     var nArchivo = idP + "_" + Math.floor(Math.random()*100000)
+    if (!fs.existsSync(dir+"/tmp/")){
+        fs.mkdirSync(dir+"/tmp/", { recursive: true });
+    }
     var rutaCarpeta =dir+"/tmp/"+nArchivo;
     fs.mkdir(rutaCarpeta,function(e){ 
         if(!e || (e && e.code === 'EEXIST')){ 
